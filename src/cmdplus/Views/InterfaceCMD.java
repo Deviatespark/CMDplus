@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cmdplus.Views;
 
 import cmdplus.Models.Consola;
@@ -10,14 +6,13 @@ import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 
-/**
- *
- * @author galve
- */
-public class InterfaceCMD extends javax.swing.JFrame {
 
-    int xMouse;
-    int yMouse;
+public class InterfaceCMD extends javax.swing.JFrame {
+    
+    private final String MensajeInicialJtextCommnad = "Introduce comando de Shell";
+    
+    private int xMouse;
+    private int yMouse;
     private Consola consola ;
     private ArrayList<String> datosEjecucion;
     private DefaultListModel model;
@@ -282,12 +277,12 @@ public class InterfaceCMD extends javax.swing.JFrame {
                 .addGap(73, 73, 73)
                 .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JTextCommand, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JTextCommand, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPbuttonOk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPbuttonDell, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -384,7 +379,7 @@ public class InterfaceCMD extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelBarMousePressed
 
     private void JTextCommandMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTextCommandMousePressed
-        if(JTextCommand.getText().equals("Ingrese nombre de usuario")){
+        if(JTextCommand.getText().equals(MensajeInicialJtextCommnad)){
             JTextCommand.setText("");
             JTextCommand.setForeground(Color.black);
         }
@@ -421,7 +416,9 @@ public class InterfaceCMD extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonOkMouseClicked
 
     private void jButtonDellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonDellMouseClicked
-        // TODO add your handling code here:
+        this.model.removeAllElements();
+        this.JTextCommand.setText(MensajeInicialJtextCommnad);
+        this.JTextCommand.setForeground(new Color(204,204,204));
     }//GEN-LAST:event_jButtonDellMouseClicked
 
     private void jButtonDellMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonDellMouseEntered

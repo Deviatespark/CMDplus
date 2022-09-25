@@ -228,12 +228,12 @@
                       <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       <Component id="User" min="-2" pref="27" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="JTextCommand" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="JTextCommand" min="-2" pref="27" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="11" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="325" max="-2" attributes="0"/>
-                      <EmptySpace pref="28" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="344" max="-2" attributes="0"/>
+                      <EmptySpace pref="36" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jPbuttonOk" min="-2" max="-2" attributes="0"/>
                           <Component id="jPbuttonDell" min="-2" max="-2" attributes="0"/>
