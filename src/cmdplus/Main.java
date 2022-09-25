@@ -18,6 +18,7 @@ public class Main {
         InterfazPrincipal interfazPrincipal = new InterfazPrincipal();
         
         interfazPrincipal.setVisible(true);
+               
       
     }
     
