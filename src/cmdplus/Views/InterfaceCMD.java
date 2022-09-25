@@ -44,12 +44,14 @@ public class InterfaceCMD extends javax.swing.JFrame {
         User = new javax.swing.JLabel();
         JTextCommand = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jPboton = new javax.swing.JPanel();
-        jButtonAceptar = new java.awt.Label();
+        jPbuttonOk = new javax.swing.JPanel();
+        jButtonOk = new java.awt.Label();
         jScrollPane1 = new javax.swing.JScrollPane();
         jListData = new javax.swing.JList<>();
         Login1 = new javax.swing.JLabel();
-        Login = new javax.swing.JLabel();
+        jPbuttonDell = new javax.swing.JPanel();
+        jButtonDell = new java.awt.Label();
+        jVersion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(3, 19, 47));
@@ -153,45 +155,47 @@ public class InterfaceCMD extends javax.swing.JFrame {
 
         jSeparator1.setForeground(new java.awt.Color(0, 134, 190));
 
-        jPboton.addAncestorListener(new javax.swing.event.AncestorListener() {
+        jPbuttonOk.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jPbotonAncestorAdded(evt);
+                jPbuttonOkAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
-        jButtonAceptar.setAlignment(java.awt.Label.CENTER);
-        jButtonAceptar.setBackground(new java.awt.Color(0, 134, 190));
-        jButtonAceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButtonAceptar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButtonAceptar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonAceptar.setText("ACEPTAR");
-        jButtonAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonOk.setAlignment(java.awt.Label.CENTER);
+        jButtonOk.setBackground(new java.awt.Color(0, 134, 190));
+        jButtonOk.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButtonOk.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButtonOk.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonOk.setText("ACEPTAR");
+        jButtonOk.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonAceptarMouseClicked(evt);
+                jButtonOkMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButtonAceptarMouseEntered(evt);
+                jButtonOkMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButtonAceptarMouseExited(evt);
+                jButtonOkMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPbotonLayout = new javax.swing.GroupLayout(jPboton);
-        jPboton.setLayout(jPbotonLayout);
-        jPbotonLayout.setHorizontalGroup(
-            jPbotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButtonAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-        );
-        jPbotonLayout.setVerticalGroup(
-            jPbotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPbotonLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPbuttonOkLayout = new javax.swing.GroupLayout(jPbuttonOk);
+        jPbuttonOk.setLayout(jPbuttonOkLayout);
+        jPbuttonOkLayout.setHorizontalGroup(
+            jPbuttonOkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPbuttonOkLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButtonOk, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPbuttonOkLayout.setVerticalGroup(
+            jPbuttonOkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPbuttonOkLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButtonOk, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jListData.setBackground(new java.awt.Color(0, 0, 0));
@@ -205,27 +209,72 @@ public class InterfaceCMD extends javax.swing.JFrame {
         Login1.setForeground(new java.awt.Color(0, 134, 190));
         Login1.setText("CMDplus");
 
+        jPbuttonDell.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jPbuttonDellAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        jButtonDell.setAlignment(java.awt.Label.CENTER);
+        jButtonDell.setBackground(new java.awt.Color(0, 134, 190));
+        jButtonDell.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButtonDell.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButtonDell.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDell.setText("BORRAR");
+        jButtonDell.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonDellMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButtonDellMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButtonDellMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPbuttonDellLayout = new javax.swing.GroupLayout(jPbuttonDell);
+        jPbuttonDell.setLayout(jPbuttonDellLayout);
+        jPbuttonDellLayout.setHorizontalGroup(
+            jPbuttonDellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButtonDell, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPbuttonDellLayout.setVerticalGroup(
+            jPbuttonDellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPbuttonDellLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButtonDell, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
         javax.swing.GroupLayout jPanelLoginLayout = new javax.swing.GroupLayout(jPanelLogin);
         jPanelLogin.setLayout(jPanelLoginLayout);
         jPanelLoginLayout.setHorizontalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPboton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
             .addGroup(jPanelLoginLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTextCommand, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JTextCommand, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(243, 243, 243))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanelLoginLayout.createSequentialGroup()
+                            .addComponent(jPbuttonDell, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPbuttonOk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(43, Short.MAX_VALUE))
             .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelLoginLayout.createSequentialGroup()
                     .addGap(16, 16, 16)
                     .addComponent(Login1)
-                    .addContainerGap(573, Short.MAX_VALUE)))
+                    .addContainerGap(543, Short.MAX_VALUE)))
         );
         jPanelLoginLayout.setVerticalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,9 +287,11 @@ public class InterfaceCMD extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jPboton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPbuttonOk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPbuttonDell, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21))
             .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelLoginLayout.createSequentialGroup()
                     .addGap(10, 10, 10)
@@ -248,9 +299,9 @@ public class InterfaceCMD extends javax.swing.JFrame {
                     .addContainerGap(553, Short.MAX_VALUE)))
         );
 
-        Login.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        Login.setForeground(new java.awt.Color(0, 134, 190));
-        Login.setText("v 2.0");
+        jVersion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jVersion.setForeground(new java.awt.Color(0, 134, 190));
+        jVersion.setText("v 2.0");
 
         javax.swing.GroupLayout jPanelPrincipalLayout = new javax.swing.GroupLayout(jPanelPrincipal);
         jPanelPrincipal.setLayout(jPanelPrincipalLayout);
@@ -260,16 +311,16 @@ public class InterfaceCMD extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanelBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanelPrincipalLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(Login)
-                .addGap(212, 212, 212)
+                .addContainerGap()
+                .addComponent(jVersion)
+                .addGap(96, 96, 96)
                 .addComponent(jPanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelPrincipalLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jLabelVersion)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 613, Short.MAX_VALUE)))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,9 +328,12 @@ public class InterfaceCMD extends javax.swing.JFrame {
                 .addComponent(jPanelBar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Login, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanelLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, 17))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
+                        .addComponent(jPanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
+                        .addComponent(jVersion)
+                        .addContainerGap())))
             .addGroup(jPanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelPrincipalLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -291,7 +345,7 @@ public class InterfaceCMD extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 990, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,29 +396,47 @@ public class InterfaceCMD extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTextCommandActionPerformed
 
-    private void jButtonAceptarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMouseEntered
-        jButtonAceptar.setBackground(new Color(0,83,190));
-        jButtonAceptar.setForeground(Color.white);
-    }//GEN-LAST:event_jButtonAceptarMouseEntered
+    private void jButtonOkMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonOkMouseEntered
+        jButtonOk.setBackground(new Color(0,83,190));
+        jButtonOk.setForeground(Color.white);
+    }//GEN-LAST:event_jButtonOkMouseEntered
 
-    private void jButtonAceptarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMouseExited
-        jButtonAceptar.setBackground(new Color(0,134,190));
-        jButtonAceptar.setForeground(Color.white);
-    }//GEN-LAST:event_jButtonAceptarMouseExited
+    private void jButtonOkMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonOkMouseExited
+        jButtonOk.setBackground(new Color(0,134,190));
+        jButtonOk.setForeground(Color.white);
+    }//GEN-LAST:event_jButtonOkMouseExited
 
-    private void jPbotonAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPbotonAncestorAdded
+    private void jPbuttonOkAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPbuttonOkAncestorAdded
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPbotonAncestorAdded
+    }//GEN-LAST:event_jPbuttonOkAncestorAdded
 
     private void JTextCommandMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTextCommandMouseClicked
         this.JTextCommand.setText("");
         this.JTextCommand.setForeground(Color.black);
     }//GEN-LAST:event_JTextCommandMouseClicked
 
-    private void jButtonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMouseClicked
+    private void jButtonOkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonOkMouseClicked
         this.datosEjecucion = this.consola.ejecucionConRetorno(this.JTextCommand.getText());
         mostrarDatos(datosEjecucion);
-    }//GEN-LAST:event_jButtonAceptarMouseClicked
+    }//GEN-LAST:event_jButtonOkMouseClicked
+
+    private void jButtonDellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonDellMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDellMouseClicked
+
+    private void jButtonDellMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonDellMouseEntered
+        jButtonDell.setBackground(new Color(0,83,190));
+        jButtonDell.setForeground(Color.white);
+    }//GEN-LAST:event_jButtonDellMouseEntered
+
+    private void jButtonDellMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonDellMouseExited
+        jButtonDell.setBackground(new Color(0,134,190));
+        jButtonDell.setForeground(Color.white);
+    }//GEN-LAST:event_jButtonDellMouseExited
+
+    private void jPbuttonDellAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPbuttonDellAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPbuttonDellAncestorAdded
 
     private void mostrarDatos(ArrayList<String> retornoEjecucion){
                 
@@ -409,10 +481,11 @@ public class InterfaceCMD extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JTextCommand;
-    private javax.swing.JLabel Login;
     private javax.swing.JLabel Login1;
     private javax.swing.JLabel User;
-    private java.awt.Label jButtonAceptar;
+    private java.awt.Label jButtonAceptar2;
+    private java.awt.Label jButtonDell;
+    private java.awt.Label jButtonOk;
     private javax.swing.JLabel jLButtonExit;
     private javax.swing.JLabel jLabelVersion;
     private javax.swing.JList<String> jListData;
@@ -420,8 +493,11 @@ public class InterfaceCMD extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelBar;
     private javax.swing.JPanel jPanelLogin;
     private javax.swing.JPanel jPanelPrincipal;
-    private javax.swing.JPanel jPboton;
+    private javax.swing.JPanel jPboton1;
+    private javax.swing.JPanel jPbuttonDell;
+    private javax.swing.JPanel jPbuttonOk;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel jVersion;
     // End of variables declaration//GEN-END:variables
 }
