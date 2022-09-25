@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/*Version 2.0 del programa que produce mejoras en clases*/
 package cmdplus;
 
 import cmdplus.Models.Consola;
@@ -12,7 +8,7 @@ import cmdplus.controller.InterfazPrincipal;
  *
  * @author galve
  */
-public class CMDplus {
+public class Main {
 
     /**
      * @param args the command line arguments
