@@ -5,6 +5,9 @@
  */
 package cmdplus;
 
+import cmdplus.classes.Consola;
+import cmdplus.controller.InterfazPrincipal;
+
 /**
  *
  * @author galve
@@ -15,7 +18,12 @@ public class CMDplus {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Inicio de proyecto");
+        
+        InterfazPrincipal interfazPrincipal = new InterfazPrincipal();
+        
+        interfazPrincipal.setVisible(true);
+             
+        
     }
     
 }
