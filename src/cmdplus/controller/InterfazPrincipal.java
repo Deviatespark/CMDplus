@@ -1,9 +1,10 @@
 
 package cmdplus.controller;
 
-import cmdplus.classes.Consola;
+import cmdplus.Models.Consola;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 public class InterfazPrincipal extends javax.swing.JFrame {
 
@@ -17,9 +18,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         this.datosEjecucion = new ArrayList<>();
         this.model = new DefaultListModel();
         this.jListData.setModel(model);
-               
-       
-        
+     
     }
 
     @SuppressWarnings("unchecked")
@@ -44,6 +43,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         jLabelCommandTitle.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabelCommandTitle.setText("Inserte comando");
 
+        jListData.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jScrollPane1.setViewportView(jListData);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -85,8 +85,9 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAcceptActionPerformed
-        this.datosEjecucion = this.consola.ejecucionConRetorno("dir");
+        this.datosEjecucion = this.consola.ejecucionConRetorno(this.jTextFieldCommand.getText());
         mostrarDatos(datosEjecucion);
+        
     }//GEN-LAST:event_jButtonAcceptActionPerformed
 
     private void mostrarDatos(ArrayList<String> retornoEjecucion){

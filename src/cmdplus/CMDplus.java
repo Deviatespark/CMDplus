@@ -5,7 +5,7 @@
  */
 package cmdplus;
 
-import cmdplus.classes.Consola;
+import cmdplus.Models.Consola;
 import cmdplus.controller.InterfazPrincipal;
 
 /**
@@ -22,8 +22,7 @@ public class CMDplus {
         InterfazPrincipal interfazPrincipal = new InterfazPrincipal();
         
         interfazPrincipal.setVisible(true);
-             
-        
+      
     }
     
 }

@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cmdplus.classes;
+package cmdplus.Models;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class Consola {
     
@@ -16,7 +17,7 @@ public class Consola {
     
     public ArrayList<String> ejecucionConRetorno(String comando){
         ArrayList<String> datosEjecucion = new ArrayList<>();
-        ProcessBuilder processBuilder = new ProcessBuilder("cmd","/c",comando);
+        ProcessBuilder processBuilder = new ProcessBuilder("cmd","/c",comando,"/b");
         Process process;
         
         try {
@@ -35,7 +36,7 @@ public class Consola {
             return datosEjecucion;
             
         } catch (IOException exception){
-            System.out.println(exception.getMessage());
+            JOptionPane.showMessageDialog(null, "Error en el comando");
         }
         
         return datosEjecucion;
