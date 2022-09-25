@@ -2,7 +2,8 @@
 package cmdplus;
 
 import cmdplus.Models.Consola;
-import cmdplus.controller.InterfazPrincipal;
+import cmdplus.Views.InterfaceCMD;
+
 
 /**
  *
@@ -14,12 +15,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        iniciarPrograma();
         
-        InterfazPrincipal interfazPrincipal = new InterfazPrincipal();
-        
-        interfazPrincipal.setVisible(true);
-               
-      
+    }
+    
+    public static void iniciarPrograma(){
+        InterfaceCMD interfaceCMD = new InterfaceCMD();
+        interfaceCMD.setVisible(true);
     }
     
 }
